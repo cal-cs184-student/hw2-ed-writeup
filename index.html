@@ -152,8 +152,8 @@
 		<p>Computing every position first means each weight uses original positions, so the result doesn't depend on processing order. The position rules are:</p>
 		<ul>
 			<li>Old interior vertex of degree n: \( (1 - nu)\,p + u \sum p_i \), with \( u = 3/16 \) if n = 3, otherwise \( 3/(8n) \).</li>
-			<li>New vertex on interior edge (A, B) with opposite vertices C, D: \( \tfrac{3}{8}(A + B) + \tfrac{1}{8}(C + D) \).</li>
-			<li>Boundary (extra credit): old vertex \( \tfrac{3}{4}p + \tfrac{1}{8}(a + b) \) using its two boundary neighbors; new vertex \( \tfrac{1}{2}(A + B) \).</li>
+			<li>New vertex on interior edge (A, B) with opposite vertices C, D: \( \frac{3}{8}(A + B) + \frac{1}{8}(C + D) \).</li>
+			<li>Boundary (extra credit): old vertex \( \frac{3}{4}p + \frac{1}{8}(a + b) \) using its two boundary neighbors; new vertex \( \frac{1}{2}(A + B) \).</li>
 		</ul>
 		<p>Every new position is a weighted average of its neighbors, so sharp corners and edges get rounded off and the cube shrinks. It also becomes lopsided. In <code>dae/cube.dae</code>, the diagonals that split the faces aren't arranged symmetrically, so the eight corners have degrees 3, 4, 4, 4, 5, 5, 5, and 6. Loop weights depend on degree, so corners that should be equivalent move by different amounts, and the difference grows each round.</p>
 		<div style="display: flex; flex-direction: column; align-items: center;">
